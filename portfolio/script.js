@@ -161,9 +161,9 @@ function updateGreeting() {
 
   if (hour >= 5 && hour < 12) {
     greetingText = "Good Morning";
-  } else if (hour >= 12 && hour < 18) {
+  } else if (hour >= 12 && hour < 16) {
     greetingText = "Good Afternoon";
-  } else if (hour >= 18 || hour < 5) {
+  } else if (hour >= 16 || hour < 5) {
     greetingText = "Good Evening";
   }
 
@@ -212,10 +212,22 @@ window.addEventListener('load', () => {
 modalCloseBtn.addEventListener('click', hideWelcomeModal);
 modalOkBtn.addEventListener('click', hideWelcomeModal);
 
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('preloader');
-  preloader.classList.add('fade-out');
-  setTimeout(() => {
-    preloader.style.display = 'none';
-  }, 600);
+document.addEventListener('DOMContentLoaded', () => {
+  const langSelect = document.getElementById('language-select');
+
+  // Load saved language or default to English
+  const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+  langSelect.value = savedLang;
+
+  // Listen for changes
+  langSelect.addEventListener('change', (e) => {
+    const selectedLang = e.target.value;
+    localStorage.setItem('selectedLanguage', selectedLang);
+
+    // For now, just alert or log (replace with actual translation logic)
+    console.log('Language changed to:', selectedLang);
+    alert(`Language changed to: ${selectedLang}`);
+
+    // TODO: Add language content swapping here if needed
+  });
 });
