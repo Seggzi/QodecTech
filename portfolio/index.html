@@ -130,8 +130,10 @@
 
     </section>
 
+
+   
     <script src="script.js"></script>
-    <!-- Welcome Modal -->
+     <!-- Welcome Modal -->
     <div id="welcome-modal"
         class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-60 transition-opacity duration-400">
         <div>
@@ -150,7 +152,23 @@
             </button>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const langSelect = document.getElementById('language-select');
+            const message = document.getElementById('message');
 
+            // Load saved language or default 'en'
+            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+            langSelect.value = savedLang;
+            message.textContent = `Selected language: ${savedLang}`;
+
+            langSelect.addEventListener('change', (e) => {
+                const selectedLang = e.target.value;
+                localStorage.setItem('selectedLanguage', selectedLang);
+                message.textContent = `Selected language: ${selectedLang}`;
+            });
+        });
+    </script>
 </body>
 
 </html>
