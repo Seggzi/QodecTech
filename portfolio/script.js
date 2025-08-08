@@ -211,3 +211,11 @@ window.addEventListener('load', () => {
 
 modalCloseBtn.addEventListener('click', hideWelcomeModal);
 modalOkBtn.addEventListener('click', hideWelcomeModal);
+
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.classList.add('fade-out');
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 600);
+});

@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+
 /* Floating Blurred Shapes */
 .shape {
   position: absolute;
@@ -146,3 +153,4 @@
 #welcome-modal.show > div {
   transform: scale(1);
 }
+
