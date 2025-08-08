@@ -42,6 +42,8 @@
     <!-- HERO -->
     <section
         class="relative flex flex-col items-center justify-center h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <!-- Particle canvas -->
+        <canvas id="particle-canvas" class="absolute inset-0 z-0"></canvas>
 
         <!-- Floating Blurred Shapes -->
         <div class="absolute inset-0">
@@ -63,6 +65,31 @@
                     Me</a>
             </div>
         </div>
+        <!-- Social Media Icons -->
+        <div class="fixed bottom-6 left-6 flex flex-col space-y-4 z-50">
+            <a href="https://github.com/Seggzi" target="_blank" rel="noopener" aria-label="GitHub"
+                class="social-icon">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                        d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.084-.73.084-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.775.42-1.305.763-1.605-2.665-.3-5.466-1.337-5.466-5.93 0-1.31.468-2.382 1.236-3.222-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.49 11.49 0 0 1 3.003-.404c1.02.004 2.045.137 3.003.404 2.29-1.552 3.295-1.23 3.295-1.23.655 1.653.242 2.873.12 3.176.77.84 1.235 1.912 1.235 3.222 0 4.606-2.803 5.625-5.475 5.92.43.372.823 1.104.823 2.227 0 1.606-.014 2.898-.014 3.292 0 .322.216.694.825.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn"
+                class="social-icon">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                        d="M20.452 20.452h-3.554v-5.568c0-1.328-.025-3.037-1.85-3.037-1.853 0-2.136 1.447-2.136 2.943v5.662h-3.554v-11.45h3.413v1.561h.05c.476-.9 1.635-1.85 3.363-1.85 3.6 0 4.266 2.368 4.266 5.448v6.29zm-14.452-13.126c-1.144 0-2.07-.927-2.07-2.07s.927-2.07 2.07-2.07 2.07.927 2.07 2.07-.926 2.07-2.07 2.07zm1.778 13.126h-3.555v-11.45h3.555v11.45zm16.224-20.452h-22c-.552 0-1 .448-1 1v22c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-22c0-.552-.448-1-1-1z" />
+                </svg>
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener" aria-label="Twitter"
+                class="social-icon">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                        d="M23.954 4.569c-.885.389-1.83.654-2.825.775a4.958 4.958 0 0 0 2.163-2.723 9.864 9.864 0 0 1-3.127 1.196 4.924 4.924 0 0 0-8.38 4.49A13.978 13.978 0 0 1 1.671 3.149 4.93 4.93 0 0 0 3.195 9.722 4.903 4.903 0 0 1 .964 9.1c0 2.28 1.616 4.178 3.768 4.613a4.922 4.922 0 0 1-2.224.084 4.937 4.937 0 0 0 4.6 3.416 9.867 9.867 0 0 1-6.102 2.104c-.395 0-.787-.023-1.17-.069a13.953 13.953 0 0 0 7.548 2.212c9.058 0 14.009-7.51 14.009-14.009 0-.214-.004-.428-.015-.64a10.012 10.012 0 0 0 2.466-2.548l-.047-.02z" />
+                </svg>
+            </a>
+        </div>
+
     </section>
 
     <script src="script.js"></script>
