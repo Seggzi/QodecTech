@@ -153,3 +153,61 @@ function connectParticles() {
 
 init();
 animate();
+
+function updateGreeting() {
+  const greetingEl = document.getElementById('greeting');
+  const hour = new Date().getHours();
+  let greetingText = "Hi";
+
+  if (hour >= 5 && hour < 12) {
+    greetingText = "Good Morning";
+  } else if (hour >= 12 && hour < 18) {
+    greetingText = "Good Afternoon";
+  } else if (hour >= 18 || hour < 5) {
+    greetingText = "Good Evening";
+  }
+
+  greetingEl.textContent = greetingText;
+}
+
+updateGreeting();
+
+const cursor = document.getElementById('custom-cursor');
+
+window.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+const interactiveElements = document.querySelectorAll('a, button');
+
+interactiveElements.forEach(elem => {
+  elem.addEventListener('mouseenter', () => {
+    cursor.classList.add('hovered');
+  });
+  elem.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hovered');
+  });
+});
+
+const welcomeModal = document.getElementById('welcome-modal');
+const modalCloseBtn = document.getElementById('modal-close');
+const modalOkBtn = document.getElementById('modal-ok');
+
+function showWelcomeModal() {
+  welcomeModal.classList.add('show');
+}
+
+function hideWelcomeModal() {
+  welcomeModal.classList.remove('show');
+  localStorage.setItem('welcomeShown', 'true');
+}
+
+window.addEventListener('load', () => {
+  if (!localStorage.getItem('welcomeShown')) {
+    showWelcomeModal();
+  }
+});
+
+modalCloseBtn.addEventListener('click', hideWelcomeModal);
+modalOkBtn.addEventListener('click', hideWelcomeModal);

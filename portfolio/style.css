@@ -72,3 +72,77 @@
   filter: drop-shadow(0 0 6px #a78bfa);
   outline: none;
 }
+
+:focus-visible {
+  outline: 3px solid #a78bfa; /* Tailwind purple-400 */
+  outline-offset: 2px;
+}
+
+#custom-cursor {
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference; /* nice contrast effect on light/dark */
+  will-change: transform, width, height, border-color, opacity;
+}
+
+.hovered {
+  width: 40px !important;
+  height: 40px !important;
+  border-color: #a78bfa !important; /* Tailwind purple-400 */
+  opacity: 0.9 !important;
+}
+
+#welcome-modal.show {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#welcome-modal > div {
+  background: linear-gradient(135deg, #1e1e2f, #2c2c43);
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.5);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  max-width: 28rem;
+  padding: 2.5rem 2rem;
+  position: relative;
+  border-radius: 1rem;
+  color: #e0e0ff;
+}
+
+#modal-close {
+  font-size: 1.5rem;
+  color: #bbb;
+  transition: color 0.25s ease;
+}
+#modal-close:hover,
+#modal-close:focus {
+  color: #a78bfa;
+}
+
+#modal-ok {
+  font-size: 1.125rem;
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+#modal-ok:hover,
+#modal-ok:focus {
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.8);
+}
+
+#welcome-modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#welcome-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#welcome-modal > div {
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+}
+
+#welcome-modal.show > div {
+  transform: scale(1);
+}
