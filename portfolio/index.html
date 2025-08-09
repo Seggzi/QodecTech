@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./assets/images/qodec_tech_logo_cropped.png" type="image/icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="bg-black text-white">
@@ -129,11 +130,26 @@
         </div>
 
     </section>
+    <!-- Time Display -->
+    <div id="time-box"></div>
+
+    <!-- Contact Floating Box -->
+    <div id="contact-box">
+        <a href="https://wa.me/2349012345678" target="_blank" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:yourmail@example.com" title="Send Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <button id="contact-close">&times;</button>
+    </div>
+
+    <!-- Contact Open Button -->
+    <button id="contact-open"><i class="fas fa-headset"></i></button>
 
 
-   
     <script src="script.js"></script>
-     <!-- Welcome Modal -->
+    <!-- Welcome Modal -->
     <div id="welcome-modal"
         class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-60 transition-opacity duration-400">
         <div>
@@ -152,23 +168,7 @@
             </button>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const langSelect = document.getElementById('language-select');
-            const message = document.getElementById('message');
 
-            // Load saved language or default 'en'
-            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-            langSelect.value = savedLang;
-            message.textContent = `Selected language: ${savedLang}`;
-
-            langSelect.addEventListener('change', (e) => {
-                const selectedLang = e.target.value;
-                localStorage.setItem('selectedLanguage', selectedLang);
-                message.textContent = `Selected language: ${selectedLang}`;
-            });
-        });
-    </script>
 </body>
 
 </html>

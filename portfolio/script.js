@@ -489,3 +489,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (animationFrameId) cancelAnimationFrame(animationFrameId);
   });
 });
+
+// Time display update
+function updateTime() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  document.getElementById("time-box").textContent = timeString;
+}
+setInterval(updateTime, 1000);
+updateTime();
+
+// Contact Box toggle
+const contactOpen = document.getElementById("contact-open");
+const contactBox = document.getElementById("contact-box");
+const contactClose = document.getElementById("contact-close");
+
+contactOpen.addEventListener("click", () => {
+  contactBox.style.display = "flex";
+  contactOpen.style.display = "none";
+});
+
+contactClose.addEventListener("click", () => {
+  contactBox.style.display = "none";
+  contactOpen.style.display = "block";
+});
