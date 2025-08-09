@@ -96,27 +96,30 @@
   border-color: #a78bfa !important; /* Tailwind purple-400 */
   opacity: 0.9 !important;
 }
+/* Overlay container */
 #welcome-modal {
-  position: fixed; /* make it stay above everything */
+  position: fixed; /* So it sits above everything */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex; /* center content */
+  background: rgba(0, 0, 0, 0.7); /* dark transparent overlay */
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.7); /* dimmed overlay */
-  z-index: 9999; /* ensure it's on top */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
+  z-index: 9999; /* make sure it's on top */
 }
 
+/* Show state */
 #welcome-modal.show {
-  opacity: 1 !important;
-  pointer-events: auto !important;
+  opacity: 1;
+  pointer-events: auto;
 }
 
+/* Modal box */
 #welcome-modal > div {
   background: linear-gradient(135deg, #1e1e2f, #2c2c43);
   box-shadow: 0 10px 30px rgba(167, 139, 250, 0.5);
@@ -130,10 +133,12 @@
   transition: transform 0.4s ease;
 }
 
+/* Scale animation when shown */
 #welcome-modal.show > div {
   transform: scale(1);
 }
 
+/* Close button */
 #modal-close {
   font-size: 1.5rem;
   color: #bbb;
@@ -144,6 +149,7 @@
   color: #a78bfa;
 }
 
+/* OK button */
 #modal-ok {
   font-size: 1.125rem;
   box-shadow: 0 0 15px rgba(167, 139, 250, 0.6);
