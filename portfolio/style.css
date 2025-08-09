@@ -96,6 +96,21 @@
   border-color: #a78bfa !important; /* Tailwind purple-400 */
   opacity: 0.9 !important;
 }
+#welcome-modal {
+  position: fixed; /* make it stay above everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex; /* center content */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7); /* dimmed overlay */
+  z-index: 9999; /* ensure it's on top */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
 
 #welcome-modal.show {
   opacity: 1 !important;
@@ -111,6 +126,12 @@
   position: relative;
   border-radius: 1rem;
   color: #e0e0ff;
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+}
+
+#welcome-modal.show > div {
+  transform: scale(1);
 }
 
 #modal-close {
@@ -132,24 +153,3 @@
 #modal-ok:focus {
   box-shadow: 0 0 25px rgba(236, 72, 153, 0.8);
 }
-
-#welcome-modal {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-#welcome-modal.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#welcome-modal > div {
-  transform: scale(0.8);
-  transition: transform 0.4s ease;
-}
-
-#welcome-modal.show > div {
-  transform: scale(1);
-}
-
