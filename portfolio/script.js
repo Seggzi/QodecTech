@@ -5,6 +5,9 @@ const textArray = [
 ];
 const canvas = document.getElementById('particle-canvas');
 const ctx = canvas.getContext('2d');
+const welcomeModal = document.getElementById('welcome-modal');
+const modalCloseBtn = document.getElementById('modal-close');
+const modalOkBtn = document.getElementById('modal-ok');
 
 let particlesArray;
 let mouse = {
@@ -17,6 +20,26 @@ let textIndex = 0;
 let charIndex = 0;
 let currentText = "";
 let isDeleting = false;
+
+function showWelcomeModal() {
+  welcomeModal.classList.add('show');
+}
+
+function hideWelcomeModal() {
+  welcomeModal.classList.remove('show');
+  localStorage.setItem('welcomeShown', 'true');
+}
+
+window.addEventListener('load', () => {
+  if (!localStorage.getItem('welcomeShown')) {
+    showWelcomeModal();
+  }
+});
+
+modalCloseBtn.addEventListener('click', hideWelcomeModal);
+modalOkBtn.addEventListener('click', hideWelcomeModal);
+
+
 
 function typeEffect() {
     currentText = textArray[textIndex];
@@ -190,27 +213,10 @@ interactiveElements.forEach(elem => {
   });
 });
 
-const welcomeModal = document.getElementById('welcome-modal');
-const modalCloseBtn = document.getElementById('modal-close');
-const modalOkBtn = document.getElementById('modal-ok');
+// const welcomeModal = document.getElementById('welcome-modal');
+// const modalCloseBtn = document.getElementById('modal-close');
+// const modalOkBtn = document.getElementById('modal-ok');
 
-function showWelcomeModal() {
-  welcomeModal.classList.add('show');
-}
-
-function hideWelcomeModal() {
-  welcomeModal.classList.remove('show');
-  localStorage.setItem('welcomeShown', 'true');
-}
-
-window.addEventListener('load', () => {
-  if (!localStorage.getItem('welcomeShown')) {
-    showWelcomeModal();
-  }
-});
-
-modalCloseBtn.addEventListener('click', hideWelcomeModal);
-modalOkBtn.addEventListener('click', hideWelcomeModal);
 
 document.addEventListener('DOMContentLoaded', () => {
   const langSelect = document.getElementById('language-select');
