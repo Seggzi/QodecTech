@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Qodec Tech Pro</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/images/qodec_tech_logo_cropped.png" type="image/icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body class="bg-black text-white relative overflow-x-hidden">
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas" class="absolute inset-0 -z-10"></canvas>
+
+  <div id="custom-cursor"
+    class="fixed pointer-events-none z-50 w-6 h-6 rounded-full border-2 border-white opacity-80 transition-all duration-200 ease-out">
+  </div>
+
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-indigo-600 focus:text-white px-3 py-2 rounded z-50">
+    Skip to main content
+  </a>
+
+
+  <!-- NAVIGATION -->
+  <header role="banner" class="fixed top-0 left-0 w-full flex items-center justify-between px-8 py-6 z-50">
+    <!-- Logo placeholder -->
+    <a href="./index.html">
+      <div class="text-xl font-bold tracking-wide select-none">
+        <img src="./assets/images/qodec_tech_logo_premium.png" alt="qodec logo" height="60px" width="120px">
+
+      </div>
+    </a>
+    <div class="ml-4 text-sm text-gray-300 dark:text-gray-400 flex items-center space-x-2 select-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19v-6" />
+      </svg>
+      <select id="language-select" aria-label="Select Language"
+        class="bg-transparent border border-gray-500 rounded px-2 py-1 text-gray-300 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <option value="en" selected>English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+
+
+    <!-- Hamburger Menu Button -->
+    <button id="menu-btn" aria-label="Toggle menu"
+      class="relative w-8 h-8 flex flex-col justify-between items-center focus:outline-none z-50">
+      <span class="block w-full h-[3px] bg-white rounded transition-transform duration-300 origin-center"></span>
+      <span class="block w-full h-[3px] bg-white rounded transition-opacity duration-300"></span>
+      <span class="block w-full h-[3px] bg-white rounded transition-transform duration-300 origin-center"></span>
+    </button>
+  </header>
+
+  <!-- Fullscreen Nav Overlay -->
+  <nav id="nav-overlay" role="navigation" aria-label="Primary navigation"
+    class="fixed inset-0 bg-black/70 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 text-3xl font-semibold text-white opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+    <a href="index.html" class="nav-link hover:text-gray-400">Home</a>
+    <a href="about.html" class="nav-link hover:text-gray-400">About</a>
+    <a href="#projects" class="nav-link hover:text-gray-400">Projects</a>
+    <a href="#contact" class="nav-link hover:text-gray-400">Contact</a>
+  </nav>
+
+
+
+  <!-- About Section -->
+  <section id="about" class="min-h-screen flex flex-col items-center justify-center px-6 py-16 relative z-10">
+       <!-- Floating Blurred Shapes -->
+        <div class="absolute inset-0">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
+
+    <div class="max-w-5xl text-center animate-fade-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">About Me</h1>
+      <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+        I am a passionate web programmer, skilled in creating modern, responsive, and user-friendly websites.
+        My mission is to blend creativity with functionality, delivering designs that are both beautiful and efficient.
+      </p>
+      <a href="#contact"
+        class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg shadow-lg transition-all duration-300">
+        Contact Me
+      </a>
+    </div>
+  </section>
+
+  <!-- Custom Cursor
+  <div id="custom-cursor" class="custom-cursor"></div> -->
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
