@@ -244,7 +244,16 @@
 }
 
 /* General mobile-first styling */
-#about {
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  #about h1 {
+    font-size: 2rem;
+  }
+  #about p {
+    font-size: 1.1rem;
+  }
+  #about {
   text-align: center;
   padding: 4rem 1.5rem;
 }
@@ -297,14 +306,6 @@
   50% { transform: translateY(-20px) rotate(10deg); }
 }
 
-/* Tablet and up */
-@media (min-width: 640px) {
-  #about h1 {
-    font-size: 2.5rem;
-  }
-  #about p {
-    font-size: 1.125rem;
-  }
 }
 
 /* Desktop and up */
