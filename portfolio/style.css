@@ -53,13 +53,13 @@
 
 /* Hamburger to X animation */
 .nav-open #menu-btn span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(10px, 10px);
 }
 .nav-open #menu-btn span:nth-child(2) {
   opacity: 0;
 }
 .nav-open #menu-btn span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(10px, -10px);
 }
 
 #particle-canvas {
@@ -243,3 +243,86 @@
   animation: fadeIn 1.2s ease-out forwards;
 }
 
+/* General mobile-first styling */
+#about {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+#about h1 {
+  font-size: 2rem;
+}
+
+#about p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Floating shape adjustments for mobile */
+.shape {
+  position: absolute;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: float 10s infinite ease-in-out;
+}
+
+.shape1 {
+  width: 150px;
+  height: 150px;
+  background: #4f46e5;
+  top: 10%;
+  left: -10%;
+}
+
+.shape2 {
+  width: 200px;
+  height: 200px;
+  background: #9333ea;
+  bottom: 20%;
+  right: -15%;
+}
+
+.shape3 {
+  width: 120px;
+  height: 120px;
+  background: #0ea5e9;
+  top: 60%;
+  left: 50%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  #about h1 {
+    font-size: 2.5rem;
+  }
+  #about p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  #about {
+    text-align: left;
+    padding: 6rem 4rem;
+  }
+  #about .max-w-5xl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #about h1 {
+    font-size: 3.5rem;
+  }
+  #about p {
+    font-size: 1.25rem;
+    max-width: 700px;
+  }
+}
