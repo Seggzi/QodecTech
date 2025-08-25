@@ -27,38 +27,44 @@
 
 
   <!-- NAVIGATION -->
- <header role="banner" class="overflow-hidden fixed top-0 left-0 w-full flex items-center justify-between px-8 py-6 z-50">
-  <!-- Logo placeholder -->
-    <a href="./index.html">
-      <div class="text-xl font-bold tracking-wide select-none">
-        <img src="./assets/images/qodec_tech_logo_premium.png" alt="qodec logo" height="60px" width="120px">
+<header role="banner" 
+  class="overflow-hidden fixed top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 md:px-8 py-4 sm:py-6 z-50">
 
-      </div>
-    </a>
-    <div class="ml-4 text-sm text-gray-300 dark:text-gray-400 flex items-center space-x-2 select-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
+  <!-- Logo -->
+  <a href="./index.html" class="flex-shrink-0">
+    <img src="./assets/images/qodec_tech_logo_premium.png" 
+         alt="qodec logo" 
+         class="h-10 w-auto sm:h-12">
+  </a>
+
+  <!-- Right Side (Language + Menu) -->
+  <div class="flex items-center space-x-3 sm:space-x-4">
+    <!-- Language Selector -->
+    <div class="text-sm text-gray-300 dark:text-gray-400 flex items-center space-x-1 sm:space-x-2 select-none">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           class="h-4 w-4 sm:h-5 sm:w-5 text-purple-400" 
+           fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z" />
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19v-6" />
       </svg>
-      <select id="language-select" aria-label="Select Language"
-        class="bg-transparent border border-gray-500 rounded px-2 py-1 text-gray-300 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
-        <option value="en" selected>English</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
+      <select id="language-select"
+        class="bg-transparent border border-gray-500 rounded px-1.5 py-0.5 sm:px-2 sm:py-1 text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <option value="en" selected>EN</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
       </select>
     </div>
 
-
-    <!-- Hamburger Menu Button -->
+    <!-- Hamburger -->
     <button id="menu-btn" aria-label="Toggle menu"
-      class="relative w-8 h-8 flex flex-col justify-between items-center focus:outline-none z-50">
-      <span class="block  w-full h-[3px] bg-white rounded transition-transform duration-300 origin-center"></span>
-      <span class="block  w-full h-[3px] bg-white rounded transition-opacity duration-300"></span>
-      <span class="block  w-full h-[3px] bg-white rounded transition-transform duration-300 origin-center"></span>
+      class="relative w-7 h-7 sm:w-8 sm:h-8 flex flex-col justify-between items-center focus:outline-none z-50">
+      <span class="block w-full h-[2px] bg-white rounded transition-transform duration-300 origin-center"></span>
+      <span class="block w-full h-[2px] bg-white rounded transition-opacity duration-300"></span>
+      <span class="block w-full h-[2px] bg-white rounded transition-transform duration-300 origin-center"></span>
     </button>
-  </header>
+  </div>
+</header>
 
   <!-- Fullscreen Nav Overlay -->
   <nav id="nav-overlay" role="navigation" aria-label="Primary navigation"
