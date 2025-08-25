@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Qodec Tech Pro</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/images/qodec_tech_logo_cropped.png" type="image/icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white relative overflow-x-hidden">
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas" class="absolute inset-0 -z-10"></canvas>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor"
+    class="fixed pointer-events-none z-50 w-6 h-6 rounded-full border-2 border-white opacity-80 transition-all duration-200 ease-out">
+  </div>
+
+  <!-- Skip Link -->
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-indigo-600 focus:text-white px-3 py-2 rounded z-50">
+    Skip to main content
+  </a>
+
+  <!-- NAVIGATION -->
+  <header role="banner" class="fixed top-0 left-0 w-full flex items-center justify-between px-8 py-6 z-50 bg-black/40 backdrop-blur-lg">
+    <a href="./index.html">
+      <img src="./assets/images/qodec_tech_logo_premium.png" alt="qodec logo" class="h-12 w-auto">
+    </a>
+
+    <!-- Language Select -->
+    <div class="ml-4 text-sm text-gray-300 flex items-center space-x-2 select-none">
+      <select id="language-select" aria-label="Select Language"
+        class="bg-transparent border border-gray-500 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <option value="en" selected>English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+
+    <!-- Hamburger Menu Button -->
+    <button id="menu-btn" aria-label="Toggle menu"
+      class="relative w-8 h-8 flex flex-col justify-between items-center focus:outline-none z-50">
+      <span class="block w-full h-[3px] bg-white rounded transition-transform duration-300 origin-center"></span>
+      <span class="block w-full h-[3px] bg-white rounded transition-opacity duration-300"></span>
+      <span class="block w-full h-[3px] bg-white rounded transition-transform duration-300 origin-center"></span>
+    </button>
+  </header>
+
+  <!-- Fullscreen Nav Overlay -->
+  <nav id="nav-overlay" role="navigation" aria-label="Primary navigation"
+    class="fixed inset-0 bg-black/70 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 text-3xl font-semibold text-white opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+    <a href="index.html" class="nav-link hover:text-gray-400">Home</a>
+    <a href="about.html" class="nav-link hover:text-gray-400">About</a>
+    <a href="projects.html" class="nav-link hover:text-gray-400">Projects</a>
+    <a href="contact.html" class="nav-link hover:text-gray-400">Contact</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="pt-32 space-y-32">
+
+    <!-- About Me -->
+    <section id="about" class="min-h-screen flex flex-col items-center justify-center px-6 relative z-10">
+      <div class="max-w-5xl text-center opacity-0 translate-y-10 transition-all duration-700 ease-out"
+           data-animate="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">About Me</h1>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+          I am a passionate web programmer, skilled in creating modern, responsive, and user-friendly websites.
+          My mission is to blend creativity with functionality, delivering designs that are both beautiful and efficient.
+        </p>
+        <a href="#contact"
+          class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg shadow-lg transition-all duration-300">
+          Contact Me
+        </a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="px-6 relative z-10">
+      <div class="max-w-5xl mx-auto text-center opacity-0 translate-y-10 transition-all duration-700 ease-out"
+           data-animate="fade-up">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">Skills</h2>
+        <p class="text-gray-300 mb-8">Here are some of the technologies I work with:</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="p-4 bg-gray-800 rounded-lg">HTML</div>
+          <div class="p-4 bg-gray-800 rounded-lg">CSS</div>
+          <div class="p-4 bg-gray-800 rounded-lg">JavaScript</div>
+          <div class="p-4 bg-gray-800 rounded-lg">Tailwind CSS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="px-6 relative z-10">
+      <div class="max-w-5xl mx-auto text-center opacity-0 translate-y-10 transition-all duration-700 ease-out"
+           data-animate="fade-up">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">Experience</h2>
+        <p class="text-gray-300 leading-relaxed">
+          I have worked on various projects ranging from personal websites to fully functional web applications,
+          focusing on clean design, accessibility, and performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Fun Facts -->
+    <section id="fun-facts" class="px-6 relative z-10">
+      <div class="max-w-5xl mx-auto text-center opacity-0 translate-y-10 transition-all duration-700 ease-out"
+           data-animate="fade-up">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">Fun Facts</h2>
+        <ul class="space-y-4 text-gray-300">
+          <li>💻 Code is my canvas.</li>
+          <li>🌍 I enjoy collaborating with developers worldwide.</li>
+          <li>⚡ I love experimenting with new web technologies.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
